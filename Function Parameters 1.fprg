@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="JANCARLOPAREDES"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-16 08:20:59 pm"/>
+        <attribute name="created" value="SkFOQ0FSTE9QQVJFREVTO0RFU0tUT1AtNzQ1R1ZOMzsyMDIyLTEyLTE2OzA4OjA5OjQ1IHBtOzM0ODE="/>
+        <attribute name="edited" value="SkFOQ0FSTE9QQVJFREVTO0RFU0tUT1AtNzQ1R1ZOMzsyMDIyLTEyLTE2OzA4OjIwOjU5IHBtOzE7MzU4Nw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="firstInput, secondInput" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter the first number: &quot;" newline="True"/>
+            <input variable="firstInput"/>
+            <output expression="&quot;Enter the second number: &quot;" newline="True"/>
+            <input variable="secondInput"/>
+            <output expression="&quot;SUBTRACTION RESULT: &quot; &amp; DIFF(firstInput, secondInput)" newline="True"/>
+            <output expression="&quot;MULTIPLICATION RESULT: &quot; &amp; MUL(firstInput, secondInput)" newline="True"/>
+            <output expression="&quot;DIVISION RESULT: &quot; &amp; QUO(firstInput, secondInput)" newline="True"/>
+            <output expression="&quot;AVERAGE RESULT: &quot; &amp; AVE(firstInput, secondInput)" newline="True"/>
+        </body>
+    </function>
+    <function name="AVE" type="Real" variable="result">
+        <parameters>
+            <parameter name="int1" type="Real" array="False"/>
+            <parameter name="int2" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="result" type="Real" array="False" size=""/>
+            <assign variable="result" expression="(int1 + int2) / 2"/>
+        </body>
+    </function>
+    <function name="DIFF" type="Integer" variable="result">
+        <parameters>
+            <parameter name="int1" type="Integer" array="False"/>
+            <parameter name="int2" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="result" type="Integer" array="False" size=""/>
+            <assign variable="result" expression="int1 - int2"/>
+        </body>
+    </function>
+    <function name="MUL" type="Integer" variable="result">
+        <parameters>
+            <parameter name="int1" type="Integer" array="False"/>
+            <parameter name="int2" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="result" type="Integer" array="False" size=""/>
+            <assign variable="result" expression="int1 * int2"/>
+        </body>
+    </function>
+    <function name="QUO" type="Real" variable="result">
+        <parameters>
+            <parameter name="int1" type="Real" array="False"/>
+            <parameter name="int2" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="result" type="Real" array="False" size=""/>
+            <assign variable="result" expression="int1 / int2"/>
+        </body>
+    </function>
+</flowgorithm>

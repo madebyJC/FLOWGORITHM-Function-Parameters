@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="JANCARLOPAREDES"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-16 08:56:48 pm"/>
+        <attribute name="created" value="SkFOQ0FSTE9QQVJFREVTO0RFU0tUT1AtNzQ1R1ZOMzsyMDIyLTEyLTE2OzA4OjM0OjM5IHBtOzM0ODI="/>
+        <attribute name="edited" value="SkFOQ0FSTE9QQVJFREVTO0RFU0tUT1AtNzQ1R1ZOMzsyMDIyLTEyLTE2OzA4OjU2OjQ4IHBtOzE7MzU5NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="func" type="String" array="False" size=""/>
+            <declare name="LEFT, RIGHT" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter a value for LEFT: &quot;" newline="True"/>
+            <input variable="LEFT"/>
+            <output expression="&quot;Enter a value for RIGHT: &quot;" newline="True"/>
+            <input variable="RIGHT"/>
+            <assign variable="func" expression="DIRECT(LEFT, RIGHT)"/>
+            <if expression="func == &quot;POS&quot;">
+                <then>
+                    <call expression="POSITIVE()"/>
+                </then>
+                <else>
+                    <if expression="func == &quot;NEG&quot;">
+                        <then>
+                            <call expression="NEGATIVE()"/>
+                        </then>
+                        <else/>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="DIRECT" type="String" variable="result">
+        <parameters>
+            <parameter name="LEFT" type="Integer" array="False"/>
+            <parameter name="RIGHT" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="result" type="String" array="False" size=""/>
+            <if expression="LEFT == RIGHT">
+                <then>
+                    <output expression="&quot;They are both equal&quot;" newline="True"/>
+                    <assign variable="result" expression="&quot;&quot;"/>
+                </then>
+                <else>
+                    <if expression="LEFT &gt; RIGHT">
+                        <then>
+                            <assign variable="result" expression="&quot;POS&quot;"/>
+                        </then>
+                        <else>
+                            <assign variable="result" expression="&quot;NEG&quot;"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="NEGATIVE" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="loop" type="Integer" array="False" size=""/>
+            <for variable="loop" start="0" end="-20" direction="dec" step="1">
+                <output expression="loop" newline="True"/>
+            </for>
+        </body>
+    </function>
+    <function name="POSITIVE" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="loop" type="Integer" array="False" size=""/>
+            <for variable="loop" start="0" end="20" direction="inc" step="1">
+                <output expression="loop" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

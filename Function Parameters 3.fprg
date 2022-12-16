@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="JANCARLOPAREDES"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-16 08:34:33 pm"/>
+        <attribute name="created" value="SkFOQ0FSTE9QQVJFREVTO0RFU0tUT1AtNzQ1R1ZOMzsyMDIyLTEyLTE2OzA4OjIxOjA2IHBtOzM0NzI="/>
+        <attribute name="edited" value="SkFOQ0FSTE9QQVJFREVTO0RFU0tUT1AtNzQ1R1ZOMzsyMDIyLTEyLTE2OzA4OjM0OjMzIHBtOzE7MzU4NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="firstInput, secondInput, thirdInput" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the three grades of the student, simultaneously: &quot;" newline="True"/>
+            <input variable="firstInput"/>
+            <input variable="secondInput"/>
+            <input variable="thirdInput"/>
+            <output expression="&quot;The result of the student grades is &quot; &amp; ASSEST(firstInput, secondInput, thirdInput)" newline="True"/>
+        </body>
+    </function>
+    <function name="ASSEST" type="String" variable="result">
+        <parameters>
+            <parameter name="int1" type="Integer" array="False"/>
+            <parameter name="int2" type="Integer" array="False"/>
+            <parameter name="int3" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="result" type="String" array="False" size=""/>
+            <declare name="ave" type="Integer" array="False" size=""/>
+            <assign variable="result" expression="&quot;&quot;"/>
+            <assign variable="ave" expression="(int1 + int2 + int3) / 3"/>
+            <if expression="ave == 100">
+                <then>
+                    <assign variable="result" expression="&quot;PERFECT&quot;"/>
+                </then>
+                <else>
+                    <if expression="ave &gt;= 60">
+                        <then>
+                            <assign variable="result" expression="&quot;PASSED&quot;"/>
+                        </then>
+                        <else>
+                            <assign variable="result" expression="&quot;FAILED&quot;"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;AVERAGE GRADE: &quot; &amp; ave" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
